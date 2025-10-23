@@ -11049,23 +11049,39 @@ html {
   position: relative;
   display: block;
   max-width: 25rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem; /* más redondeado, como .empresa */
   overflow: hidden;
+  padding: 1.5rem; /* igual que .empresa */
+  background-color: #f9f9f9; /* gris claro para contraste */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 0px solid #ff6f00; /* acento naranja */
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-top 0.3s ease;
 }
-.portfolio .portfolio-item .portfolio-item-caption {
+
+.portfolio .portfolio-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 2); /* sombra más profunda pero no tan oscura */
+  transform: translateY(-4px);
+  border-top: 2px solid #ff6f00; /* acento naranja visible al pasar el mouse */
+}
+
+/* Si quieres conservar el efecto de overlay anaranjado, adaptado */
+.portfolio .portfolio-item::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.2s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 137, 6, 0.1);
   opacity: 0;
-  background-color: rgba(255, 137, 6, 0.4);
+  transition: opacity 0.3s ease-in-out;
+  border-radius: inherit;
 }
-.portfolio .portfolio-item .portfolio-item-caption:hover {
+/*
+.portfolio .portfolio-item:hover::before {
   opacity: 1;
-}
-.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
-  font-size: 1.5rem;
-}
+}*/
+
 
 .portfolio-modal .btn-close {
   color: #1abc9c;
@@ -11112,6 +11128,7 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   border: 0px solid #ff6f00; /* Acento naranja (para ajustar) */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .empresa:hover {
