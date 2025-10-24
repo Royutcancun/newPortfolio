@@ -11059,9 +11059,9 @@ html {
 }
 
 .portfolio .portfolio-item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 2); /* sombra más profunda pero no tan oscura */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 10); /* sombra más profunda pero no tan oscura */
   transform: translateY(-4px);
-  border-top: 2px solid #ff6f00; /* acento naranja visible al pasar el mouse */
+  border-top: 5px solid #ff6f00; /* acento naranja visible al pasar el mouse */
 }
 
 /* Si quieres conservar el efecto de overlay anaranjado, adaptado */
@@ -11077,11 +11077,6 @@ html {
   transition: opacity 0.3s ease-in-out;
   border-radius: inherit;
 }
-/*
-.portfolio .portfolio-item:hover::before {
-  opacity: 1;
-}*/
-
 
 .portfolio-modal .btn-close {
   color: #1abc9c;
