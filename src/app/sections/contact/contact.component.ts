@@ -19,6 +19,8 @@ export class ContactComponent {
     message: ['', Validators.required],
   });
 
+  loading (){};
+
   submitted = signal(false);
   jsonOutput = signal<any | null>(null);
 
